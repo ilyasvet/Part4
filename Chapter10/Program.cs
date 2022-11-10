@@ -62,6 +62,7 @@ namespace Chapter10
             }
         }
     }
+
     internal class Program
     {
         // Этот делегат может указывать на любой метод, который принимает
@@ -78,6 +79,7 @@ namespace Chapter10
         }
         static void Main(string[] args)
         {
+
             Program p = new Program();
             BinaryOp it = new BinaryOp(p.Add);
             it += p.Sub;

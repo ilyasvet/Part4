@@ -28,9 +28,11 @@ namespace Delegates2
             Console.WriteLine("\n\n-------Func-------\n");
             Func<int, int, int> func = Add; //Последний параметр - возвращаемое значение
             Console.WriteLine(func(10,54345));
+
+
         }
 
-
+        
         static int Add(int x, int y)
         {
             return x + y;
