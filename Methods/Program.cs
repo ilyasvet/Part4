@@ -12,7 +12,7 @@ namespace Methods
     {
         // Этот метод позволяет объекту любого типа
         // отобразить сборку, в которой он определен.
-        public static void PrintAndBeep(this IEnumerable values)
+        public static void PrintAndBeep(this IEnumerable values) //Принимает любой тип, реализующий этот интерфейс
         {
             foreach (var value in values)
             {

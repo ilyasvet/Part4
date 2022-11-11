@@ -35,6 +35,14 @@ namespace Operators
         {
             return p1.X == p2.X && p1.Y == p2.Y;
         }
+        public static bool operator ==(Point p1, int i)
+        {
+            return p1.X == i && p1.Y == i;
+        }
+        public static bool operator !=(Point p1, int i)
+        {
+            return p1.X != i && p1.Y != i;
+        }
         public static bool operator !=(Point p1, Point p2)
         {
             return p1.X != p2.X || p1.Y != p2.Y;
@@ -89,7 +97,7 @@ namespace Operators
             p3 += p1;
             p1.X = 1144;
             Console.WriteLine(p3); //p3 совершенно другой объект, так как было копирование.
-
+            Console.WriteLine(new Point() == 0);
         }
     }
 }
