@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security;
 using System.Text;
@@ -95,6 +96,23 @@ namespace Expansion
             var person = new Person("vas", "pes", 17);
             MyPeople[person] = null; //На самом деле тут добавляется person в список 
             Console.WriteLine(MyPeople[3].Name);
+
+            Console.WriteLine("\n\n=======DataTable=======\n");
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("Name");
+            dataTable.Columns.Add("Surname");
+            dataTable.Columns.Add("Age");
+            for (int i = 0; i < 4; i++)
+            {
+                dataTable.Rows.Add(MyPeople[i].Name, MyPeople[i].Surame, MyPeople[i].Age);
+            }
+            for (int i = 0; i < dataTable.Rows.Count; i++)
+            {
+                Console.WriteLine(dataTable.Rows[i][0].ToString() + " " + dataTable.Rows[i][1].ToString());
+            }
+
+            Console.WriteLine("\n\n=======Operators=======\n");
+
         }
     }
 }
